@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&family=Major+Mono+Display&display=swap');
+
+body {
+    font-family: 'Kadwa', sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: #f1c40f; /* Matching yellow background */
+    color: black;
+}
+
+/* Apply Major Mono Display font to all titles */
+h1, h2 {
+    font-family: 'Major Mono Display', monospace;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 50px;
+    color: red;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+/* Wrapper for iframe and description */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the iframe */
+iframe {
+    border: 3px solid red;
+    border-radius: 10px;
+}
+
+/* Description Styling */
+.description {
+    text-align: left;
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Back button */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+
+a:hover {
+    background-color: #2980b9;
+}

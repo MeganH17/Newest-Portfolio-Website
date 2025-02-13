@@ -1,0 +1,109 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&family=Major+Mono+Display&display=swap');
+
+
+body {
+    font-family: 'Kadwa'; /* Normal text in Kadwa */
+     margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Apply Major Mono Display font to all titles */
+.header, .sub-header, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Major Mono Display', monospace;
+
+}
+
+
+
+.navbar {
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 18px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    position: relative;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: #D62828;
+}
+
+.navbar a.active::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #D62828;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left-section {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.left-section img {
+    width: 50%;
+    max-width: 300px;
+}
+
+.right-section {
+    width: 50%;
+    background-color: #F2C94C;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.right-section h1 {
+    font-size: 50px;
+    color: #D62828;
+    font-weight: normal;
+}
+
+.right-section h1 span {
+    color: black;
+}
+
+.right-section p {
+    font-size: 16px;
+    max-width: 400px;
+    line-height: 1.5;
+    color: black;
+}
+
+.divider {
+    width: 100px;
+    height: 2px;
+    background-color: #D62828;
+    margin: 10px auto;
+}
+
+.social-links {
+    font-size: 14px;
+}
+

@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art - Megan Harun</title>
+    <link rel="stylesheet" href="art.css">
+
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="Art.html" class="active">Art</a>
+        <a href="game.html">Game</a>
+        <a href="about.html">About</a>
+    </div>
+
+
+
+    <div class="gallery-container">
+        <div class="scroll-btns">
+            <button onclick="scrollGallery(-300)">←</button>
+            <button onclick="scrollGallery(300)">→</button>
+        </div>
+        <div class="gallery" id="gallery">
+            <img src="ARTS PICS/jhope.jpg" alt="Art 1">
+            <img src="ARTS PICS/Life Drawing (1).png" alt="Art 2">
+            <img src="ARTS PICS/Life Drawing.png" alt="Art 3">
+            <img src="ARTS PICS/Secret.jpg" alt="Art 4">
+            <img src="ARTS PICS/Stare.jpg" alt="Art 5">
+            <img src="ARTS PICS/cover.jpg" alt="Art 7">
+            <img src="ARTS PICS/desain poster 3.jpg" alt="Art 9">
+            <img src="ARTS PICS/WhatsApp Image 2022-11-09 at 10.13.50 AM.jpeg" alt="Art 12">
+            <img src="ARTS PICS/IMG_0587.PNG" alt="Art 13">
+        </div>
+    </div>
+
+    <script>
+        function scrollGallery(distance) {
+            document.getElementById("gallery").scrollBy({
+                left: distance,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+</body>
+</html>
+
