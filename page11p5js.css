@@ -1,92 +1,105 @@
-@import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&family=Major+Mono+Display&display=swap');
+@font-face {
+  font-family: 'FantasyKids';
+  src: url('Fantasy\ kids\ Regular.otf') format('opentype');}
 
-body {
-    font-family: 'Kadwa', sans-serif;
+/* Remove default spacing */
+* {
     margin: 0;
-    padding: 20px;
-    text-align: center;
-    background-color: #f1c40f; /* Matching yellow background */
-    color: black;
-}
-
-/* Apply Major Mono Display font to all titles */
-h1, h2 {
-    font-family: 'Major Mono Display', monospace;
-    letter-spacing: 2px;
-}
-
-h1 {
-    font-size: 50px;
-    color: red;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 30px;
-    margin-top: 20px;
-}
-
-/* Wrapper for iframe, video, and description */
-.content-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    max-width: 1000px;
-    margin: auto;
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Styling for the iframe */
-iframe {
-    border: 4px solid red;
-    border-radius: 10px;
-    height: 900px;
-    width: 900px;
-}
-
-/* Styling for the video */
-.video-container {
-    width: 640px;
-    max-width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
-
-video {
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
     width: 100%;
-    height: auto;
-    border: 4px solid red;
-    border-radius: 10px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /*  background image */
+  body {
+    cursor: url('crusor2.png'), auto;
+    font-family: 'FantasyKids', Arial, sans-serif;
+    background-image: url('Cover\ 1.png'); 
+    background-size: cover;
+    background-color: black;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; 
+    padding-top: 20px;
+    flex-direction: column;
+    position: relative;
 }
 
-/* Description Styling */
-.description {
-    text-align: left;
-    max-width: 600px;
-    font-size: 18px;
-    line-height: 1.5;
+a:hover, img:hover {
+  cursor: url('hovercrusor.png'), auto;
 }
 
-/* Back button */
-a {
-    display: inline-block;
-    margin-top: 20px;
-    background-color: #3498db;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    transition: background-color 0.3s ease-in-out;
+.title-image {
+  max-width: 50%;
+  width: 600px;
+  height: auto;
 }
 
-a:hover {
-    background-color: #2980b9;
+.floating-image {
+  position: absolute;
+  width: 900px; 
+  height: auto;
+  opacity: 50%;
+}
+
+/*Positions */
+.left {
+  left: 10px;  
+}
+
+.right {
+  right: 10px;  
+}
+
+.center-button {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px; 
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+/* ZOOM Button */
+.center-button:hover {
+  transform: translate(-50%, -50%) scale(1.05); 
+}
+
+/* Back to Home Button */
+#back-home {
+  position: fixed;  
+  bottom: 10px;     
+  left: 10px;       
+  z-index: 999;     
+}
+
+.back-home-button {
+  width: 80px;  
+  height: auto;
+  cursor: pointer;  
+  transition: transform 0.2s ease-in-out;
+}
+
+.back-home-button:hover {
+  transform: scale(1.1);  
+}
+
+.intro-text {
+  font-family: 'FantasyKids', Arial, sans-serif;
+  text-align: center;  
+  font-size: 1.5rem;    
+  color: white;         
+  margin-top: 70px;     
+  padding: 20px;      
+  max-width: 800px;     
+  margin-left: auto;
+  margin-right: auto;   
 }

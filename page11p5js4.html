@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Results</title>
+  <link rel="stylesheet" href="page11p5js4.css" />
+</head>
+<body>
+
+    <!-- Character Image -->
+    <img id="character-img" class="character-img" src="" alt="Character Image" />
+
+    <div class="result-container">
+    
+        <h1>Your Character: <span id="role">Loading...</span></h1>
+        <p id="result-description">Please wait while we calculate your results...</p>
+
+        <div id="result-details"></div>
+
+        <!-- Retry button to start the quiz again -->
+        <a href="page11p5js.html" class="retry-button">Take the Quiz Again</a>
+    </div>
+
+    <!-- Inline JavaScript for handling quiz results -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Get the result from localStorage
+        const result = localStorage.getItem('userRole');
+        const resultDescription = getResultDescription(result);
+        const resultDetails = getResultDetails(result);
+
+        // Display the result and detailed description
+        document.getElementById('role').innerText = result;
+        document.getElementById('result-description').innerText = resultDescription;
+        document.getElementById('result-details').innerHTML = resultDetails;
+
+        // Show different character images depending on result
+        const image = document.getElementById('character-img');
+        if (result === 'Protagonist') {
+          image.src = 'Hero.png'; // or 'protagonist.png'
+        } else if (result === 'Sidekick') {
+          image.src = 'Sidekick.png'; // or 'sidekick.png'
+        } else if (result === 'Villain') {
+          image.src = 'Villain.png'; // or 'villain.png'
+        } else {
+          image.src = 'default.png'; // fallback image
+        }
+      });
+
+      // Function to get a description based on the result
+      function getResultDescription(result) {
+        switch(result) {
+          case 'Protagonist':
+            return "You’re the one with fire in your heart and conviction in your choices.";
+          case 'Sidekick':
+            return "You’re the glue holding the story together—reliable, loyal, and quietly brave.";
+          case 'Villain':
+            return "You’re bold, clever, and not afraid to disrupt the system.";
+          default:
+            return "Something went wrong. Please try again.";
+        }
+      }
+
+      // Function to get detailed explanation based on the result
+      function getResultDetails(result) {
+        switch(result) {
+          case 'Protagonist':
+            return `
+              <h2>⭐ The Protagonist</h2>
+              <p>You stand up when no one else will, and you believe in change, even when it seems impossible. Your decisions come from a deep sense of justice and empathy, and others often look to you for direction—even if you don’t always realize it.</p>
+              <h3>Why this result?</h3>
+              <p>Your answers show that you’re driven by purpose and the need to do what’s right, even at personal cost. You’re often the first to act and the last to give up.</p>
+              <h3>Strengths:</h3>
+              <ul>
+                <li>Inspiring leadership</li>
+                <li>Strong moral compass</li>
+                <li>Resilience in hard times</li>
+              </ul>
+              <h3>Things to watch out for:</h3>
+              <ul>
+                <li>Burnout from taking on too much</li>
+                <li>Being too self-sacrificial</li>
+                <li>Seeing things as too black and white</li>
+              </ul>
+              <p>Remember: Even heroes need rest. It's okay not to have all the answers.</p>
+            `;
+          case 'Sidekick':
+            return `
+              <h2>🛡 The Sidekick</h2>
+              <p>You’re not always in the spotlight, but your actions shape the story just as much as any hero. You’re the voice of reason, the comforting presence, and often the emotional center of your group.</p>
+              <h3>Why this result?</h3>
+              <p>Your answers reflect deep loyalty and a strong sense of connection to others. You tend to support, rather than lead, but you’re far from passive.</p>
+              <h3>Strengths:</h3>
+              <ul>
+                <li>Compassion and empathy</li>
+                <li>Trustworthy and dependable</li>
+                <li>Emotionally grounded</li>
+              </ul>
+              <h3>Things to watch out for:</h3>
+              <ul>
+                <li>Losing your voice in others’ stories</li>
+                <li>Putting others' needs above your own</li>
+                <li>Avoiding conflict to keep the peace</li>
+              </ul>
+              <p>Remember: You are not “less than.” You’re essential, powerful in quiet ways.</p>
+            `;
+          case 'Villain':
+            return `
+              <h2>🦹 The Villain</h2>
+              <p>You value strength and self-determination—and sometimes, that means being misunderstood. You see the flaws in the world and have the guts to challenge them. You don’t follow the rules—you write your own.</p>
+              <h3>Why this result?</h3>
+              <p>Your answers show that you’re ambitious and unafraid to take what you believe is yours. You don’t wait for permission—you move.</p>
+              <h3>Strengths:</h3>
+              <ul>
+                <li>Strategic thinking</li>
+                <li>Confidence and vision</li>
+                <li>Unshakable independence</li>
+              </ul>
+              <h3>Things to watch out for:</h3>
+              <ul>
+                <li>Trust issues</li>
+                <li>Difficulty accepting vulnerability</li>
+                <li>Letting ambition override empathy</li>
+              </ul>
+              <p>Remember: Being a villain doesn’t mean being evil—it means being real, raw, and powerful. Just make sure your power builds something worth standing for.</p>
+            `;
+          default:
+            return "Something went wrong. Please try again.";
+        }
+      }
+    </script>
+
+    <!-- External JavaScript file -->
+    <script src="Page112.js"></script>
+
+</body>
+</html>

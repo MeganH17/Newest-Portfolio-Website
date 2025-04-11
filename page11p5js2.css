@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'FantasyKids';
+    src: url('Fantasy\ kids\ Regular.otf') format('opentype');}
+
+body {
+    font-family: 'FantasyKids', Arial, sans-serif;
+    font-size: 60px;
+    cursor: url('crusor2.png'), auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+    background-image: url('Cover\ 4.png'); /* <-- replace with your image filename */
+    background-size: cover;
+    background-color: black;
+    background-position: center;
+}
+
+a:hover,
+img:hover,
+button:hover,
+.center-button:hover,
+.question:hover {
+    cursor: url('hovercrusor.png'), auto;
+}
+.question-container {
+    font-family: 'FantasyKids', Arial, sans-serif;
+    width: 80%; /* Adjust the width to make the container bigger */
+    max-width: 900px; /* You can change this to set a maximum size */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.question {
+    font-family: 'FantasyKids', Arial, sans-serif;
+    font-size: 40px;
+    background-image: url('Panel.png'); /* Replace with your panel image */
+    background-size: 100% 100%;         /* Stretch to fill perfectly */
+    background-position: center;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    min-height: 300px;                  /* Set a consistent height */
+    margin-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;                      /* Add space for content */
+    box-sizing: border-box;
+
+    color: rgb(0, 0, 0);
+
+    text-align: center;
+    border: black;
+    border-radius: 1;
+    box-shadow:black;
+}
+
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-family: 'FantasyKids', Arial, sans-serif;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Button style after clicking */
+button.clicked {
+    background-color: rgb(163, 255, 141); /* Change to red after clicking */
+    color: rgb(17, 83, 0);
+}
+
+/* Optional: Button hover effect */
+button:hover {
+    background-color: #c87272;
+}
+
+.center-button {
+    width: 200px; /* Adjust size as needed */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* Optional: Hover effect */
+.center-button:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
