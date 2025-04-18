@@ -3,7 +3,6 @@
     src: url('Fantasy\ kids\ Regular.otf') format('opentype');
 }
 
-/* Base Styling for Result Page */
 body {
     font-family: 'FantasyKids', Arial, sans-serif;
     background-color: #f0f0f0;
@@ -68,12 +67,11 @@ h1 {
     background-color: #ff4b3b;
 }
 
-/* Ensure the character image has the correct class reference */
 .character-img {
-    position: absolute; /* Keep this for absolute positioning */
-    left: 0; /* Image will align to the left */
-    top: 50%; /* Center the image vertically */
-    transform: translateY(-50%); /* Adjust vertical position */
+    position: absolute; 
+    left: 0; 
+    top: 50%; 
+    transform: translateY(-50%); 
     width: 500px;
     height: auto;
     max-height: 90vh;
@@ -81,16 +79,16 @@ h1 {
    
     
     animation: slideIn 1s ease-out;
-    z-index: 1; /* Optional: ensures it's above other elements */
+    z-index: 1; 
 }
 
 @keyframes slideIn {
     from {
-        transform: translate(300%, -50%); /* Start far to the right */
+        transform: translate(300%, -50%);  
         opacity: 0;
     }
     to {
-        transform: translate(0, -50%); /* End at normal position */
+        transform: translate(0, -50%); 
         opacity: 1;
     }
 }

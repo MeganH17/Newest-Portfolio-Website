@@ -22,20 +22,20 @@
         <a href="page11p5js.html" class="retry-button">Take the Quiz Again</a>
     </div>
 
-    <!-- Inline JavaScript for handling quiz results -->
+    <!-- JavaScript quiz results -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        // Get the result from localStorage
+        // localStorage
         const result = localStorage.getItem('userRole');
         const resultDescription = getResultDescription(result);
         const resultDetails = getResultDetails(result);
 
-        // Display the result and detailed description
+        //result
         document.getElementById('role').innerText = result;
         document.getElementById('result-description').innerText = resultDescription;
         document.getElementById('result-details').innerHTML = resultDetails;
 
-        // Show different character images depending on result
+        // images
         const image = document.getElementById('character-img');
         if (result === 'Protagonist') {
           image.src = 'Hero.png'; // or 'protagonist.png'
@@ -48,7 +48,7 @@
         }
       });
 
-      // Function to get a description based on the result
+      // 
       function getResultDescription(result) {
         switch(result) {
           case 'Protagonist':
@@ -62,7 +62,7 @@
         }
       }
 
-      // Function to get detailed explanation based on the result
+    
       function getResultDetails(result) {
         switch(result) {
           case 'Protagonist':
@@ -131,7 +131,7 @@
       }
     </script>
 
-    <!-- External JavaScript file -->
+    <!-- JavaScript -->
     <script src="Page112.js"></script>
 
 </body>

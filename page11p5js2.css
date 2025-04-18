@@ -8,10 +8,11 @@ body {
     cursor: url('crusor2.png'), auto;
     background-color: #f0f0f0;
     padding: 20px;
-    background-image: url('Cover\ 4.png'); /* <-- replace with your image filename */
+    background-image: url('Cover\ 4.png'); 
     background-size: cover;
     background-color: black;
     background-position: center;
+
 }
 
 a:hover,
@@ -23,8 +24,8 @@ button:hover,
 }
 .question-container {
     font-family: 'FantasyKids', Arial, sans-serif;
-    width: 80%; /* Adjust the width to make the container bigger */
-    max-width: 900px; /* You can change this to set a maximum size */
+    width: 80%; 
+    max-width: 900px; 
     margin: 0 auto;
     padding: 20px;
 }
@@ -32,13 +33,13 @@ button:hover,
 .question {
     font-family: 'FantasyKids', Arial, sans-serif;
     font-size: 40px;
-    background-image: url('Panel.png'); /* Replace with your panel image */
-    background-size: 100% 100%;         /* Stretch to fill perfectly */
+    background-image: url('Panel.png'); 
+    background-size: 100% 100%;         
     background-position: center;
     background-repeat: no-repeat;
 
     width: 100%;
-    min-height: 300px;                  /* Set a consistent height */
+    min-height: 300px;                  
     margin-bottom: 40px;
 
     display: flex;
@@ -46,7 +47,7 @@ button:hover,
     justify-content: center;
     align-items: center;
 
-    padding: 40px;                      /* Add space for content */
+    padding: 40px;                      
     box-sizing: border-box;
 
     color: rgb(0, 0, 0);
@@ -71,24 +72,24 @@ button {
     transition: background-color 0.3s;
 }
 
-/* Button style after clicking */
+/* Button after clicking */
 button.clicked {
-    background-color: rgb(163, 255, 141); /* Change to red after clicking */
+    background-color: rgb(163, 255, 141); 
     color: rgb(17, 83, 0);
 }
 
-/* Optional: Button hover effect */
+/* Button hover effect */
 button:hover {
     background-color: #c87272;
 }
 
 .center-button {
-    width: 200px; /* Adjust size as needed */
+    width: 200px; 
     cursor: pointer;
     transition: transform 0.2s ease;
 }
 
-/* Optional: Hover effect */
+/* Hover effect */
 .center-button:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    transform: scale(1.05); 
 }
