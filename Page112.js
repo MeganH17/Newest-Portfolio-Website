@@ -72,7 +72,7 @@ let scores = {
     // Character images depending on result
     const image = document.getElementById('character-img');
     if (result === 'Protagonist') {
-      image.src = 'Hero.png'; 
+      image.src = 'Hero1.PNG'; 
     } else if (result === 'Sidekick') {
       image.src = 'Sidekick.png'; 
     } else if (result === 'Villain') {
