@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'FantasyKids';
+    src: url('Fantasy kids Regular.otf') format('opentype');
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  body {
+    cursor: url('crusor2.png'), auto;
+    font-family: 'FantasyKids', Arial, sans-serif;
+    background-image: url('Blackcatpage.png');
+    background-size: cover;
+    background-color: black;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .intro-text {
+    font-family: 'FantasyKids', Arial, sans-serif;
+    text-align: left;
+    font-size: 1.6rem;
+    color: black;
+    border-radius: 20px;
+    padding: 100px;
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: 500px;
+    margin-right: -596px; /* shift to the right */
+    line-height: 1.5;
+    position: relative;
+  }
+  
+  
+  a:hover, img:hover {
+    cursor: url('hovercrusor.png'), auto;
+  }
+  
+  .center-button {
+    position: fixed;
+    top: 45%;
+    left: 36%; /* You asked to move it left */
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: transform 0.05s linear;
+    width: 400px;
+    height: auto;
+    pointer-events: none;
+  }
+  
+  .catfood-button {
+    position: fixed;
+    top: 85%;
+    left: 15%;
+    transform: translate(0%, -50%);
+    width: 200px;
+    height: auto;
+    pointer-events: auto; /* must be clickable */
+    cursor: pointer;
+  }
+
+  .catfood-button:hover {
+    transform: translate(0%, -50%) scale(1.05); /* keep the same translate */
+  }
+  
+  .catplay-button {
+    position: fixed;
+    top: 85%;
+    left: 33%;
+    transform: translate(0%, -50%);
+    width: 200px;
+    height: auto;
+    pointer-events: auto; /* must be clickable */
+    cursor: pointer;
+  }
+
+  .catplay-button:hover {
+    transform: translate(0%, -50%) scale(1.05); /* keep the same translate */
+  }
+  
+  
+  .catpat-button {
+    position: fixed;
+    top: 85%;
+    left: 50%;
+    transform: translate(0%, -50%);
+    width: 200px;
+    height: auto;
+    pointer-events: auto; /* must be clickable */
+    cursor: pointer;
+  }
+
+  .catpat-button:hover {
+    transform: translate(0%, -50%) scale(1.05); /* keep the same translate */
+  }
+  
+
+  .center-button:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+  
+  #back-home {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 999;
+  }
+  
+  .back-home-button {
+    width: 80px;
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .back-home-button:hover {
+    transform: scale(1.1);
+  }
+  

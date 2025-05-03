@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'FantasyKids';
+    src: url('Fantasy\ kids\ Regular.otf') format('opentype');}
+  
+  /* Remove default spacing */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+    
+    /*  background image */
+    body {
+      cursor: url('crusor2.png'), auto;
+      font-family: 'FantasyKids', Arial, sans-serif;
+      background-image: url('Chose\ ur\ meow.png'); 
+      background-size: cover;
+      background-color: black;
+      background-position: center;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start; 
+      align-items: center; 
+      padding-top: 0px;
+      flex-direction: column;
+      position: relative;
+  }
+  
+  a:hover, img:hover {
+    cursor: url('hovercrusor.png'), auto;
+  }
+  
+  /* Back to Home Button */
+  #back-home {
+    position: fixed;  
+    bottom: 10px;     
+    left: 10px;       
+    z-index: 999;     
+  }
+  
+  .back-home-button {
+    width: 80px;  
+    height: auto;
+    cursor: pointer;  
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .back-home-button:hover {
+    transform: scale(1.1);  
+  }
+  
+  .cat-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 100px;
+    height: 100vh;         /* Take up full screen height */
+    margin: 0;             /* Remove margin */
+    padding: 0;            /* Remove padding */
+  }
+  
+  .hover-button {
+    width: 260px; /* Adjust size */
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-button:hover {
+    transform: scale(1.05);
+  }
+  
+  .left-cat {
+    margin-right: 0; /* Example placeholder style */
+    margin: 0; /* Remove spacing */
+    padding: 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .middle-cat {
+    transform: none; 
+    margin: 0; /* Remove spacing */
+    padding: 0;
+    transition: transform 0.3s ease;
+  }
+  
+  .right-cat {
+    margin-left: 0; /* Example placeholder style */
+    margin: 0; /* Remove spacing */
+    padding: 0;
+    transition: transform 0.3s ease;
+    
+  }
+
+
+  .soundoffoffbutton {
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    transform: translate(-50%, -50%);
+    width: 100px; 
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s;
+    pointer-events: auto;
+  }
+
+  .soundoffoffbutton:hover{
+    transform: translate(-50%, -50%) scale(1.05); 
+  }
+
+  /* Add the wiggle animation */
+@keyframes wiggle {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(10deg);
+    }
+    50% {
+      transform: rotate(-10deg);
+    }
+    75% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  /* Apply wiggle on hover */
+  .left-cat:hover,
+  .middle-cat:hover,
+  .right-cat:hover {
+    animation: wiggle 0.5s ease-in-out;
+  }
