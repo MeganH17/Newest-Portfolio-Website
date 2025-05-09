@@ -5,10 +5,10 @@ window.addEventListener("DOMContentLoaded", () => {
     const soundButton = document.getElementById("soundoff-button"); 
    
     // Start background music on first click (browser autoplay rules)
-    document.body.addEventListener("click", () => {
+    document.getElementById("soundoff-button").addEventListener("click", () => {
       bgAudio.play();
     }, { once: true });
-  
+    
     // If button is found
     if (button && hoverSound) {
       console.log("Button found!");
@@ -44,12 +44,3 @@ window.addEventListener("DOMContentLoaded", () => {
     
   });
   
-//   mainImage.addEventListener("click", () => {
-//     mainImage.src = "pose2.png";
-
-//     console.log(2);
-  
-//     setTimeout(() => {
-//       mainImage.src = "pose1.png";
-//     }, 1000);
-//   });
