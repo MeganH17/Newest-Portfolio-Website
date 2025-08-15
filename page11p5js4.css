@@ -18,6 +18,11 @@ body {
     min-height: 100vh;
     box-sizing: border-box;
     margin: 0;
+cursor: url('crusor2.png'), auto;
+}
+ /* Custom cursor for links and images */
+a:hover, img:hover {
+    cursor: url('hovercrusor.png'), auto; /* Make sure the path to hovercrusor.png is correct */
 }
 
 .result-container {

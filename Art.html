@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art - Megan Harun</title>
     <link rel="stylesheet" href="art.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&family=Major+Mono+Display&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -18,23 +17,67 @@
     </div>
 
 
-
     <div class="gallery-container">
         <div class="scroll-btns">
             <button onclick="scrollGallery(-300)">←</button>
             <button onclick="scrollGallery(300)">→</button>
         </div>
+
         <div class="gallery" id="gallery">
-            <img src="ARTS PICS/jhope.jpg" alt="Art 1">
-            <img src="ARTS PICS/Life Drawing (1).png" alt="Art 2">
-            <img src="ARTS PICS/Life Drawing.png" alt="Art 3">
-            <img src="ARTS PICS/Secret.jpg" alt="Art 4">
-            <img src="ARTS PICS/Stare.jpg" alt="Art 5">
-            <img src="ARTS PICS/cover.jpg" alt="Art 7">
-            <img src="ARTS PICS/desain poster 3.jpg" alt="Art 9">
-            <img src="ARTS PICS/WhatsApp Image 2022-11-09 at 10.13.50 AM.jpeg" alt="Art 12">
-            <img src="ARTS PICS/IMG_0587.PNG" alt="Art 13">
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="ARTS PICS/jhope.jpg" alt="Art 1">
+                <div class="overlay">MY LOVE. 
+    This is an illustration that simply illustrate the love between Janice and her husband - a fanfiction illustration.
+                </div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="ARTS PICS/Life Drawing (1).png" alt="Art 2">
+                <div class="overlay">LANA. 
+    Your red haired friend is a character design of an elementary student in the Glimore Elementary School.</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="ARTS PICS/Life Drawing.png" alt="Art 3">
+                <div class="overlay">JACKIE THE RIPPER. 
+    A grim ripper who loves making friends. He is a mascot for a gamer twitch.</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="ARTS PICS/Secret.jpg" alt="Art 4">
+                <div class="overlay">A SECRET NOTE. 
+    Kento, He's a highschool students who knows about everybody's secret. It is his superpower.</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="ARTS PICS/Stare.jpg" alt="Art 5">
+                <div class="overlay">PERSONAL PORTRAIT.
+    This is my portrait, A manhwa style of myself.</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="ARTS PICS/cover.jpg" alt="Art 7">
+                <div class="overlay">LOVE COFFEE. 
+    This is the Cover book illustration of a popup book I created.</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="ARTS PICS/desain poster 3.jpg" alt="Art 9">
+                <div class="overlay">BALI FUTURE. 
+    This is an illustration of what Bali, Indoensia would look like in the next couple of dacades. A strongly cultured island mixed with technology and robot. I made this because Bali is my hometown.</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="ARTS PICS/WhatsApp Image 2022-11-09 at 10.13.50 AM.jpeg" alt="Art 12">
+                <div class="overlay">ROOSTER FIGHT. 
+    This is a painting I did on a tote bag that representing the fight between rooster. A male dominant hobby that involve gambling in Bali.</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+                <img src="ARTS PICS/IMG_0587.PNG" alt="Art 13">
+                <div class="overlay">CONFESSION. 
+    A short comic of a confession by a girl to her crush.</div>
+            </div>
         </div>
+    </div>
+
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="">
+        <div id="lightbox-overlay"></div>
     </div>
 
     <script>
@@ -44,8 +87,24 @@
                 behavior: 'smooth'
             });
         }
+
+        function openLightbox(item) {
+            const imgSrc = item.querySelector('img').src;
+            const overlayText = item.querySelector('.overlay').innerText;
+
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxOverlay = document.getElementById('lightbox-overlay');
+
+            lightbox.style.display = 'flex';
+            lightboxImg.src = imgSrc;
+            lightboxOverlay.innerText = overlayText;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
     </script>
 
 </body>
 </html>
-

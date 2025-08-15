@@ -1,28 +1,29 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&family=Major+Mono+Display&display=swap');
 
-
 body {
-    font-family: 'Kadwa'; /* Normal text in Kadwa */
-     margin: 0;
+    font-family: 'Kadwa', sans-serif;
+    margin: 0;
     padding: 0;
     text-align: center;
     background-color: #F2C94C;
-    background-image: url('BACK.png'); /* Replace with your actual image file */
-    background-size:auto; /* Ensures the image covers the whole screen */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents repeating */
-    background-attachment: fixed; /* Keeps the image fixed while scrolling */
+    background-image: url('BACK.png');
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    cursor: url('crusor2.png'), auto;
+}
+ /* Custom cursor for links and images */
+a:hover, img:hover {
+    cursor: url('hovercrusor.png'), auto; /* Make sure the path to hovercrusor.png is correct */
 }
 
-/* Apply Major Mono Display font to all titles */
+/* Titles font */
 .header, .sub-header, h1, h2, h3, h4, h5, h6 {
     font-family: 'Major Mono Display', monospace;
-
 }
 
-/* Navbar Styling */
+/* Navbar */
 .navbar {
     background-color: #ffffff;
     padding: 15px;
@@ -40,8 +41,7 @@ body {
     transition: color 0.3s ease;
 }
 
-.navbar a:hover, 
-.navbar a.active {
+.navbar a:hover, .navbar a.active {
     color: #D62828;
 }
 
@@ -56,12 +56,13 @@ body {
     left: 0;
 }
 
-/* Gallery Section */
+/* Gallery */
 .gallery-container {
-    width: 90%;
-    margin: 20px auto;
-    overflow: hidden;
+    width: 100%;
+    margin: 10px auto;
+    overflow: visible;
     text-align: center;
+    position: relative;
 }
 
 .gallery {
@@ -71,27 +72,65 @@ body {
     scroll-behavior: smooth;
     padding: 20px;
     white-space: nowrap;
-    scrollbar-width: none; /* Hide scrollbar for a cleaner look */
+    scrollbar-width: none;
 }
 
-/* Hide scrollbar for Webkit browsers */
 .gallery::-webkit-scrollbar {
     display: none;
 }
 
-.gallery img {
-    width: 400px;
-    height: 400px;
-    object-fit: cover; /* Ensures it fits within the box */
+.gallery-item {
+    position: relative;
+    flex: 0 0 auto;
+    width: 500px;
+    height: 600px;
     border-radius: 10px;
-    transition: transform 0.3s ease, object-fit 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
 }
 
-.gallery img:hover {
-    transform: scale(1.1);
-    object-fit: contain; /* Show the full image when hovered */
-    background-color: white; /* Optional: adds contrast */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
+
+/* Overlay */
+.gallery-item .overlay {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    font-family: 'Kadwa', sans-serif;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;       /* allows vertical scrolling if needed */
+    word-wrap: break-word;  /* wrap long words */
+    line-height: 1.5;
+    white-space: pre-wrap;  /* preserve line breaks and spaces */
+}
+
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(70%);
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
 /* Scroll Buttons */
 .scroll-btns {
     text-align: center;
@@ -112,4 +151,38 @@ body {
 
 .scroll-btns button:hover {
     background-color: #B22222;
+}
+
+/* Lightbox */
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+#lightbox-img {
+    max-width: 90%;
+    max-height: 80%;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#lightbox-overlay {
+    color: white;
+    font-family: 'Kadwa', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    max-width: 90%;
+    word-break: break-word;
+    line-height: 1.4;
 }

@@ -14,7 +14,11 @@ body {
     background-repeat: no-repeat; /* Prevents repeating */
     background-attachment:scroll; /* Keeps the image fixed while scrolling */
     
-
+cursor: url('crusor2.png'), auto;
+}
+ /* Custom cursor for links and images */
+a:hover, img:hover {
+    cursor: url('hovercrusor.png'), auto; /* Make sure the path to hovercrusor.png is correct */
 }
 
 /* Apply Major Mono Display font to all titles */
@@ -81,4 +85,40 @@ body {
 
 .back-button:hover {
     background-color: #D62828;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows images to wrap into rows */
+    justify-content: center; /* Centers the content */
+    gap: 30px; /* Adjust spacing between images */
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.gallery figure {
+    width: 25%; /* Keeps the same size as before */
+    text-align: center;
+    margin: 0; /* remove extra margin from figure */
+}
+
+.gallery img {
+    width: 100%;
+    height: fit-content;
+    border-radius: 40px;
+    border: 6px solid rgb(255, 255, 255);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+figcaption {
+    font-family: 'Kadwa';
+    font-size: 15px;
+    margin-top: 2px;
+    color: #0b0101;
+    font-weight: 600;
+
 }

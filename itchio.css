@@ -1,60 +1,29 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&family=Major+Mono+Display&display=swap');
 
-
 body {
-    font-family: 'Kadwa'; /* Normal text in Kadwa */
-     margin: 0;
+    font-family: 'Kadwa', sans-serif; /* Normal text in Kadwa */
+    margin: 0;
     padding: 0;
     text-align: center;
     background-color: #F2C94C;
     background-image: url('back2.png'); /* Replace with your actual image file */
-    background-size:cover; /* Ensures the image covers the whole screen */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents repeating */
-    background-attachment:scroll; /* Keeps the image fixed while scrolling */
-    
-
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+cursor: url('crusor2.png'), auto;
+}
+ /* Custom cursor for links and images */
+a:hover, img:hover {
+    cursor: url('hovercrusor.png'), auto; /* Make sure the path to hovercrusor.png is correct */
 }
 
-/* Apply Major Mono Display font to all titles */
-.header, .sub-header, h1, h2, h3, h4, h5, h6 {
+/* Titles use Major Mono Display */
+.header, .sub-header, h1, h2, h3, h4, h5, h6, .title {
     font-family: 'Major Mono Display', monospace;
-
 }
-
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap; /* Allows images to wrap into rows */
-    justify-content:center; /* Centers the content */
-    gap: 30px; /* Adjust spacing between images */
-    padding: 20px;
-    max-width: 900px; /* Adjust based on your design */
-    margin:auto; /* Centers the gallery */
-}
-
-.gallery a {
-    width: 30%; /* Ensures two images per row */
-    text-align: center; /* Centers the image inside the link */
-}
-
-.gallery img {
-    width: 100%; /* Ensures the image fully fills its container */
-    height:fit-content; /* Maintains aspect ratio */
-    border-radius: 40px;
-    border: 6px solid rgb(255, 255, 255);
-    transition: transform 0.3s ease-in-out;
-}
-
-.gallery img:hover {
-    transform: scale(1.1);
-}
-
 
 .title {
-    font-family: 'Major Mono Display', monospace;
     font-size: 48px;
     font-weight: bold;
     color: #D62828;
@@ -81,5 +50,39 @@ body {
 }
 
 .back-button:hover {
-    background-color: #D62828;
+    background-color: #B71C1C; /* Slightly darker on hover */
+}
+
+/* Gallery/Grid Layout */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+    gap: 20px;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+    border: 6px solid rgb(255, 255, 255);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+.gallery-item p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #000000;
+    font-family: 'Kadwa', sans-serif; /* Description text in Kadwa */
+    font-weight: 600;
 }

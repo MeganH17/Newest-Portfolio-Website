@@ -8,8 +8,12 @@ body {
     text-align: center;
     background-color: #f1c40f; /* Matching yellow background */
     color: black;
+cursor: url('crusor2.png'), auto;
 }
-
+ /* Custom cursor for links and images */
+a:hover, img:hover {
+    cursor: url('hovercrusor.png'), auto; /* Make sure the path to hovercrusor.png is correct */
+}
 /* Apply Major Mono Display font to all titles */
 h1, h2 {
     font-family: 'Major Mono Display', monospace;
