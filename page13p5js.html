@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Pet</title>
+  <link rel="stylesheet" href="page13p5js.css">
+</head>
+<body>
+  <h1>My Virtual Pet</h1>
+
+  <div class="container">
+    <!-- Left side: Webcam + Pet -->
+    <div class="left">
+      <!-- Webcam feed -->
+      <video id="webcam" autoplay playsinline></video>
+
+      <!-- Pet image -->
+      <img id="pet" src="1.png" alt="Pet">
+    </div>
+
+    <!-- Right side: Tutorial video -->
+    <div class="right">
+      <h2>How to Play</h2>
+      <video id="tutorial" controls>
+        <source src="tutorial.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    <!-- Image under the MP4 -->
+    <img id="extra-image" src="Copy of Pink Yellow Feminine Happy Birthday Instagram Post.png" alt="Tutorial Picture">
+</div>
+
+
+  <!-- TensorFlow.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.6.0"></script>
+  <!-- Teachable Machine -->
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8.4/dist/teachablemachine-image.min.js"></script>
+  <!-- Your JavaScript -->
+  <script src="page13p5js.js"></script>
+
+ <script src="page12(2).js"></script> 
+  <!-- Back to Home button -->
+  <a href="p5js.html" id="back-home">
+    <img src="Home.png" alt="Back to Home" class="back-home-button" />
+  </a>
+</body>
+</html>

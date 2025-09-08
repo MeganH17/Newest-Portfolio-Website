@@ -1,0 +1,107 @@
+/* Load custom font */
+@font-face {
+    font-family: 'FantasyKids';
+    src: url("Fantasy kids Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    margin: 20px;
+    font-family: 'FantasyKids', Arial, sans-serif;
+    background-image: url("Back frog.png"); /* ✅ fixed */
+    background-size: cover;      /* fill the screen */
+    background-position: center; /* keep centered */
+    background-repeat: no-repeat;/* avoid tiling */
+    text-align: center;
+    color: #ffffff;
+    overflow: hidden; /* prevent page scroll */
+}
+h1 {
+    margin: 8px ;
+    font-size: 3rem;
+    font-family: 'FantasyKids', Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 30px; /* smaller gap */
+    height: calc(100vh - 100px); /* fit inside screen */
+    box-sizing: border-box;
+}
+
+.left, .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 2px; /* let both sides scale evenly */
+    max-width: 30%;
+}
+
+/* Webcam feed */
+#webcam {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border: 4px solid #ffffff;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 12px rgba(236, 233, 233, 0.2);
+    margin-top: 10px;
+}
+
+/* Pet image */
+#pet {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 0px;
+    border-radius: 10px;
+    background: white;
+    padding: 10px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Right section heading */
+.right h2 {
+    margin-bottom: 2px;
+    font-size: 1.8rem;
+    font-family: 'FantasyKids', Arial, sans-serif;
+    color: #ffffff;
+    margin-top: 0px;
+}
+
+/* Tutorial video */
+#tutorial {
+    width: 100%;
+    max-width: 350px;
+    max-height: 60vh; /* keep it from overflowing */
+    border: 4px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    object-fit: contain;
+    margin-top: 5px;
+}
+
+/* Back button */
+.back-home-button {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    width: 60px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.back-home-button:hover {
+    transform: scale(1.1);
+}
+
+/* Extra image */
+#extra-image {
+    width: 350px;
+    margin-top: 5px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
